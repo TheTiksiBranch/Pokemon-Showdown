@@ -82,7 +82,7 @@ exports.BattleFormatsData = {
 		tier: "OU",
 	},
 	squirtle: {
-		randomBattleMoves: ["icebeam", "hydropump", "rapidspin", "scald", "aquajet", "toxic"],
+		randomBattleMoves: ["icebeam", "rapidspin", "scald", "aquajet"],
 		randomDoubleBattleMoves: ["muddywater", "icebeam", "hydropump", "fakeout", "scald", "followme", "icywind", "protect"],
 		eventPokemon: [
 			{"generation": 3, "level": 10, "gender": "M", "moves":["tackle", "tailwhip", "bubble", "withdraw"], "pokeball": "pokeball"},
@@ -152,7 +152,7 @@ exports.BattleFormatsData = {
 		tier: "UU",
 	},
 	pidgey: {
-		randomBattleMoves: ["roost", "bravebird", "heatwave", "return", "workup", "uturn", "thief"],
+		randomBattleMoves: ["mirrormove", "bravebird", "heatwave", "return", "quickattack", "uturn"],
 		randomDoubleBattleMoves: ["bravebird", "heatwave", "return", "uturn", "tailwind", "protect"],
 		tier: "LC",
 	},
@@ -187,7 +187,7 @@ exports.BattleFormatsData = {
 		tier: "LC",
 	},
 	raticate: {
-		randomBattleMoves: ["protect", "facade", "flamewheel", "suckerpunch", "uturn", "swordsdance"],
+		randomBattleMoves: ["return", "doubleedge", "flamewheel", "suckerpunch", "uturn", "crunch"],
 		randomDoubleBattleMoves: ["facade", "flamewheel", "suckerpunch", "uturn", "crunch", "protect"],
 		eventPokemon: [
 			{"generation": 3, "level": 34, "moves":["refresh", "superfang", "scaryface", "hyperfang"]},
@@ -195,7 +195,7 @@ exports.BattleFormatsData = {
 		tier: "PU",
 	},
 	raticatealola: {
-		randomBattleMoves: ["swordsdance", "return", "suckerpunch", "knockoff", "doubleedge"],
+		randomBattleMoves: ["pursuit", "return", "suckerpunch", "crunch", "doubleedge", "uturn"],
 		randomDoubleBattleMoves: ["doubleedge", "suckerpunch", "protect", "crunch", "uturn"],
 		tier: "PU",
 	},
