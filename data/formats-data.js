@@ -179,15 +179,16 @@ exports.BattleFormatsData = {
 		tier: "UU",
 	},
 	rattata: {
-		randomBattleMoves: ["facade", "flamewheel", "suckerpunch", "uturn", "wildcharge", "thunderwave", "crunch", "revenge"],
+		randomBattleMoves: ["doubleedge", "flamewheel", "suckerpunch", "uturn", "return", "crunch"],
 		randomDoubleBattleMoves: ["facade", "flamewheel", "suckerpunch", "uturn", "wildcharge", "superfang", "crunch", "protect"],
 		tier: "LC",
 	},
 	rattataalola: {
+		randomBattleMoves: ["doubleedge", "pursuit", "suckerpunch", "uturn", "return", "crunch"],
 		tier: "LC",
 	},
 	raticate: {
-		randomBattleMoves: ["return", "doubleedge", "flamewheel", "suckerpunch", "uturn", "crunch"],
+		randomBattleMoves: ["protect", "facade", "flamewheel", "suckerpunch", "uturn", "swordsdance"],
 		randomDoubleBattleMoves: ["facade", "flamewheel", "suckerpunch", "uturn", "crunch", "protect"],
 		eventPokemon: [
 			{"generation": 3, "level": 34, "moves":["refresh", "superfang", "scaryface", "hyperfang"]},
@@ -195,7 +196,7 @@ exports.BattleFormatsData = {
 		tier: "PU",
 	},
 	raticatealola: {
-		randomBattleMoves: ["pursuit", "return", "suckerpunch", "crunch", "doubleedge", "uturn"],
+		randomBattleMoves: ["swordsdance", "return", "suckerpunch", "knockoff", "doubleedge"],
 		randomDoubleBattleMoves: ["doubleedge", "suckerpunch", "protect", "crunch", "uturn"],
 		tier: "PU",
 	},
@@ -206,7 +207,7 @@ exports.BattleFormatsData = {
 		eventOnly: true,
 	},
 	spearow: {
-		randomBattleMoves: ["return", "drillpeck", "doubleedge", "uturn", "quickattack", "pursuit", "drillrun", "featherdance"],
+		randomBattleMoves: ["drillpeck", "doubleedge", "drillrun", "uturn"],
 		randomDoubleBattleMoves: ["return", "drillpeck", "doubleedge", "uturn", "quickattack", "drillrun", "protect"],
 		eventPokemon: [
 			{"generation": 3, "level": 22, "moves":["batonpass", "falseswipe", "leer", "aerialace"]},
@@ -219,7 +220,7 @@ exports.BattleFormatsData = {
 		tier: "PU",
 	},
 	ekans: {
-		randomBattleMoves: ["coil", "gunkshot", "glare", "suckerpunch", "earthquake", "rest"],
+		randomBattleMoves: ["coil", "gunkshot", "aquatail", "suckerpunch", "earthquake"],
 		randomDoubleBattleMoves: ["gunkshot", "seedbomb", "suckerpunch", "aquatail", "earthquake", "rest", "rockslide", "protect"],
 		eventPokemon: [
 			{"generation": 3, "level": 14, "gender": "F", "nature": "Docile", "ivs": {"hp": 26, "atk": 28, "def": 6, "spa": 14, "spd": 30, "spe": 11}, "abilities":["shedskin"], "moves":["leer", "wrap", "poisonsting", "bite"], "pokeball": "pokeball"},
@@ -236,7 +237,7 @@ exports.BattleFormatsData = {
 		tier: "PU",
 	},
 	pichu: {
-		randomBattleMoves: ["fakeout", "volttackle", "encore", "irontail", "toxic", "thunderbolt"],
+		randomBattleMoves: ["fakeout", "volttackle", "grassknot", "return", "voltswitch"],
 		randomDoubleBattleMoves: ["fakeout", "volttackle", "encore", "irontail", "protect", "thunderbolt"],
 		eventPokemon: [
 			{"generation": 3, "level": 5, "shiny": 1, "moves":["thundershock", "charm", "surf"], "pokeball": "pokeball"},
@@ -426,7 +427,7 @@ exports.BattleFormatsData = {
 		tier: "PU",
 	},
 	sandshrew: {
-		randomBattleMoves: ["earthquake", "rockslide", "swordsdance", "rapidspin", "xscissor", "stealthrock", "toxic", "knockoff"],
+		randomBattleMoves: ["earthquake", "rockslide", "rapidspin", "stealthrock", "knockoff"],
 		randomDoubleBattleMoves: ["earthquake", "rockslide", "swordsdance", "xscissor", "knockoff", "protect"],
 		eventPokemon: [
 			{"generation": 3, "level": 12, "gender": "M", "nature": "Docile", "ivs": {"hp": 4, "atk": 23, "def": 8, "spa": 31, "spd": 1, "spe": 25}, "moves":["scratch", "defensecurl", "sandattack", "poisonsting"], "pokeball": "pokeball"},
@@ -434,6 +435,7 @@ exports.BattleFormatsData = {
 		tier: "LC",
 	},
 	sandshrewalola: {
+		randomBattleMoves: ["iciclespear", "ironhead", "rapidspin", "stealthrock", "earthquake"],
 		eventPokemon: [
 			{"generation": 7, "level": 10, "isHidden": false, "moves":["rapidspin", "iceball", "powdersnow", "bide"], "pokeball": "cherishball"},
 		],
