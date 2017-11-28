@@ -4777,7 +4777,7 @@ exports.BattleFormatsData = {
 		tier: "PU",
 	},
 	scraggy: {
-		randomBattleMoves: ["dragondance", "icepunch", "highjumpkick", "drainpunch", "rest", "bulkup", "crunch", "knockoff"],
+		randomBattleMoves: ["dragondance", "zenheadbutt", "highjumpkick", "drainpunch", "poisonjab", "knockoff"],
 		eventPokemon: [
 			{"generation": 5, "level": 1, "gender": "M", "nature": "Adamant", "isHidden": false, "abilities":["moxie"], "moves":["headbutt", "leer", "highjumpkick", "lowkick"], "pokeball": "cherishball"},
 		],
@@ -4797,7 +4797,7 @@ exports.BattleFormatsData = {
 		tier: "NU",
 	},
 	yamask: {
-		randomBattleMoves: ["nastyplot", "trickroom", "shadowball", "hiddenpowerfighting", "willowisp", "haze", "rest", "sleeptalk", "painsplit"],
+		randomBattleMoves: ["toxicspikes", "shadowball", "hex", "willowisp", "knockoff", "painsplit"],
 		tier: "LC",
 	},
 	cofagrigus: {
@@ -4806,7 +4806,7 @@ exports.BattleFormatsData = {
 		tier: "BL3",
 	},
 	tirtouga: {
-		randomBattleMoves: ["shellsmash", "aquajet", "waterfall", "stoneedge", "earthquake", "stealthrock"],
+		randomBattleMoves: ["shellsmash", "aquajet", "waterfall", "stoneedge", "zenheadbutt"],
 		eventPokemon: [
 			{"generation": 5, "level": 15, "gender": "M", "isHidden": false, "abilities":["sturdy"], "moves":["bite", "protect", "aquajet", "bodyslam"], "pokeball": "cherishball"},
 		],
@@ -4830,7 +4830,7 @@ exports.BattleFormatsData = {
 		tier: "PU",
 	},
 	trubbish: {
-		randomBattleMoves: ["clearsmog", "toxicspikes", "spikes", "gunkshot", "painsplit", "toxic"],
+		randomBattleMoves: ["clearsmog", "toxicspikes", "spikes", "gunkshot", "drainpunch", "recycle"],
 		tier: "LC",
 	},
 	garbodor: {
@@ -4839,7 +4839,7 @@ exports.BattleFormatsData = {
 		tier: "NU",
 	},
 	zorua: {
-		randomBattleMoves: ["suckerpunch", "extrasensory", "darkpulse", "hiddenpowerfighting", "uturn", "knockoff"],
+		randomBattleMoves: ["suckerpunch", "extrasensory", "darkpulse", "nightdaze", "uturn", "knockoff", "nastyplot", "swordsdance"],
 		tier: "LC",
 	},
 	zoroark: {
