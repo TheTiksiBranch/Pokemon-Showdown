@@ -6769,6 +6769,11 @@ exports.BattleFormatsData = {
 		],
 		tier: "CAP",
 	},
+	pajantom: {
+		randomBattleMoves: ["spiritshackle", "dragonclaw", "toxicspikes", "psychicfangs", "earthquake", "substitute", "leechlife"],
+		isNonstandard: true,
+		tier: "CAP",
+	},	
 	syclant: {
 		randomBattleMoves: ["bugbuzz", "icebeam", "blizzard", "earthpower", "spikes", "superpower", "tailglow", "uturn", "focusblast"],
 		isNonstandard: true,
