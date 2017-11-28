@@ -5954,6 +5954,7 @@ exports.BattleFormatsData = {
 		tier: "RU",
 	},
 	litten: {
+		randomBattleMoves: ["swordsdance", "flareblitz", "doublekick", "uturn", "overheat"],
 		unreleasedHidden: true,
 		tier: "LC",
 	},
@@ -5968,6 +5969,7 @@ exports.BattleFormatsData = {
 		tier: "NU",
 	},
 	popplio: {
+		randomBattleMoves: ["scald", "hydropump", "icebeam", "moonblast", "aquajet"],
 		unreleasedHidden: true,
 		tier: "LC",
 	},
@@ -5982,6 +5984,7 @@ exports.BattleFormatsData = {
 		tier: "UU",
 	},
 	pikipek: {
+		randomBattleMoves: ["bravebird", "furyattack", "bulletseed", "brickbreak", "flamecharge", "uturn"],
 		tier: "LC",
 	},
 	trumbeak: {
@@ -5993,6 +5996,7 @@ exports.BattleFormatsData = {
 		tier: "PU",
 	},
 	yungoos: {
+		randomBattleMoves: ["return", "earthquake", "uturn", "pursuit", "yawn"],
 		tier: "LC",
 	},
 	gumshoos: {
@@ -6007,6 +6011,7 @@ exports.BattleFormatsData = {
 		eventOnly: true,
 	},
 	grubbin: {
+		randomBattleMoves: ["xscissor", "poisonjab", "acrobatics", "thunderbolt", "voltswitch"],
 		tier: "LC",
 	},
 	charjabug: {
@@ -6024,6 +6029,7 @@ exports.BattleFormatsData = {
 		eventOnly: true,
 	},
 	crabrawler: {
+		randomBattleMoves: ["closecombat", "crabhammer", "earthquake", "stoneedge", "rocktomb"],
 		tier: "LC",
 	},
 	crabominable: {
@@ -6067,9 +6073,11 @@ exports.BattleFormatsData = {
 		eventOnly: true,
 	},
 	rockruff: {
+		randomBattleMoves: ["stealthrock", "rockslide", "firefang", "suckerpunch"],
 		tier: "LC",
 	},
 	rockruffdusk: {
+		randomBattleMoves: ["happyhour", "rockslide", "firefang", "thunderfang"],
 		eventPokemon: [
 			{"generation": 7, "level": 10, "moves":["tackle", "bite", "firefang", "happyhour"], "pokeball": "cherishball"},
 			{"generation": 7, "level": 10, "moves":["tackle", "bite", "thunderfang", "happyhour"], "pokeball": "cherishball"},
@@ -6103,6 +6111,7 @@ exports.BattleFormatsData = {
 		battleOnly: true,
 	},
 	mareanie: {
+		randomBattleMoves: ["scald", "sludgebomb", "haze", "toxicspikes", "recover"],
 		eventPokemon: [
 			{"generation": 7, "level": 1, "shiny": 1, "isHidden": true, "moves":["toxic", "stockpile", "swallow"], "pokeball": "cherishball"},
 		],
@@ -6114,6 +6123,7 @@ exports.BattleFormatsData = {
 		tier: "OU",
 	},
 	mudbray: {
+		randomBattleMoves: ["earthquake", "rockslide", "heavyslam", "closecombat", "rest", "sleeptalk"],
 		tier: "LC",
 	},
 	mudsdale: {
@@ -6122,6 +6132,7 @@ exports.BattleFormatsData = {
 		tier: "PU",
 	},
 	dewpider: {
+		randomBattleMoves: ["scald", "leechlife", "infestation", "stickyweb", "rest", "sleeptalk"],
 		tier: "LC",
 	},
 	araquanid: {
@@ -6136,6 +6147,7 @@ exports.BattleFormatsData = {
 		eventOnly: true,
 	},
 	fomantis: {
+		randomBattleMoves: ["leafstorm", "hiddenpowerfire", "synthesis", "defog", "aromatherapy"],
 		tier: "LC",
 	},
 	lurantis: {
@@ -6150,6 +6162,7 @@ exports.BattleFormatsData = {
 		eventOnly: true,
 	},
 	morelull: {
+		randomBattleMoves: ["spore", "moonblast", "gigadrain", "strengthsap"],
 		tier: "LC",
 	},
 	shiinotic: {
@@ -6158,6 +6171,7 @@ exports.BattleFormatsData = {
 		tier: "PU",
 	},
 	salandit: {
+		randomBattleMoves: ["nastyplot", "fireblast", "sludgebomb", "hiddenpowergrass", "knockoff"],
 		tier: "LC",
 	},
 	salazzle: {
@@ -6175,6 +6189,7 @@ exports.BattleFormatsData = {
 		eventOnly: true,
 	},
 	stufful: {
+		randomBattleMoves: ["swordsdance", "return", "brickbreak", "earthquake", "superpower"],
 		tier: "LC",
 	},
 	bewear: {
@@ -6227,6 +6242,7 @@ exports.BattleFormatsData = {
 		tier: "PU",
 	},
 	wimpod: {
+		randomBattleMoves: ["spikes", "taunt", "scald", "aquajet"],
 		tier: "LC",
 	},
 	golisopod: {
@@ -6235,6 +6251,7 @@ exports.BattleFormatsData = {
 		tier: "RU",
 	},
 	sandygast: {
+		randomBattleMoves: ["earthpower", "shadowball", "energyball", "shoreup"],
 		tier: "LC",
 	},
 	palossand: {
@@ -6441,6 +6458,7 @@ exports.BattleFormatsData = {
 		tier: "RU",
 	},
 	jangmoo: {
+		randomBattleMoves: ["dragondance", "outrage", "dragonclaw", "earthquake", "substitute"],
 		tier: "LC",
 	},
 	hakamoo: {
@@ -6499,6 +6517,7 @@ exports.BattleFormatsData = {
 		tier: "OU",
 	},
 	cosmog: {
+		randomBattleMoves: ["splash", "teleport"],
 		eventPokemon: [
 			{"generation": 7, "level": 5, "moves":["splash"]},
 		],
