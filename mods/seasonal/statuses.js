@@ -318,6 +318,14 @@ let BattleStatuses = {
 		onFaint: function () {
 			this.add(`c|@Iyarito|RIP Patrona`);
 		},
+	jdarden: {
+		noCopy: true,
+		onStart: function () {
+			this.add(`c|%jdarden|I've cultivated some mass during my hibernation`);
+		},
+		onFaint: function () {
+			this.add(`c|%jdarden|Back to my natural state`);
+		},
 	},
 	kay: {
 		noCopy: true,
