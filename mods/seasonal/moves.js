@@ -1443,7 +1443,7 @@ let BattleMovedex = {
 		basePower: 80,
 		category: "Physical",
 		desc: "Lowers the user's Defense, Special Defense and Speed by 1 stage.",
-		shortDesc: "Lowers the user's Def, Sp. Def. and Spe by 1.",
+		shortDesc: "Lowers the user's Def, Sp. Def, and Spe by 1.",
 		id: "inkzooka",
 		name: "Inkzooka",
 		isNonstandard: true,
