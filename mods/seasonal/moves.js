@@ -2048,7 +2048,7 @@ let BattleMovedex = {
 		isNonstandard: true,
 		pp: 20,
 		priority: 0,
-		flags: {mirror: 1, protect: 1, authentic:1},
+		flags: {mirror: 1, protect: 1, authentic: 1},
 		onPrepareHit: function (target, source) {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "Freeze Dry", target);
