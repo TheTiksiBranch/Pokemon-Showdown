@@ -167,7 +167,7 @@ let BattleMovedex = {
 		basePower: 70,
 		category: "Physical",
 		desc: "If the target uses certain non-damaging moves this turn, the user steals that move to use itself. Fails if no move is stolen or if the user is under the effect of Sky Drop.",
-		shortDesc: "Steals status move; fails if it does not. Priority.",
+		shortDesc: "Steals foe's move. Fails if target attacks. Priority.",
 		id: "pilfer",
 		name: "Pilfer",
 		isNonstandard: true,
