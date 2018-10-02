@@ -1631,7 +1631,7 @@ let BattleMovedex = {
 		basePower: 40,
 		category: "Special",
 		desc: "Has a 100% chance to flinch the target. If this move hits a Pokemon not behind a Substitute, and if both the user and target are not already transformed or under the effect of Illusion, the user transforms into the opponent, copying its current stats, stat stages, types, moves, Ability, weight, gender, and sprite. The user's level and HP remain the same and each copied move receives only 5 PP, with a maximum of 5 PP each. The user can no longer change formes if it would have the ability to do so.",
-		shortDesc: "Hits first; user flinches and transforms into target.",
+		shortDesc: "Hits first; foe flinches; user transforms into target.",
 		id: "ipmerge",
 		name: "IP Merge",
 		isNonstandard: true,
