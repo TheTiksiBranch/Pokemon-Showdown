@@ -158,8 +158,8 @@ let BattleAbilities = {
 	},
 	// Cleo
 	adrenalinerush: {
-		desc: "On switch-in, this Pokemon's Attack and Speed are doubled for 5 turns. After five turns have passed, these effects are removed.",
-		shortDesc: "On switch-in, this Pokemon's Attack and Speed are doubled for 5 turns.",
+		desc: "On switch-in, this Pokemon's Special Attack and Speed are doubled for 5 turns. After five turns have passed, these effects are removed.",
+		shortDesc: "On switch-in, this Pokemon's Sp. Atk and Speed are doubled for 5 turns.",
 		onStart: function (pokemon) {
 			pokemon.addVolatile('adrenalinerush');
 		},
