@@ -140,7 +140,7 @@ let BattleAbilities = {
 			}
 		},
 		onAfterMove: function (pokemon, move) {
- 			pokemon.formeChange('Shaymin', this.effect);
+			pokemon.formeChange('Shaymin', this.effect);
 		},
 	},
 	// cc
