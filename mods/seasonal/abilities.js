@@ -16,8 +16,8 @@ let BattleAbilities = {
 	// Please keep abilites organized alphabetically based on staff member name!
 	// 5gen
 	seasonsgift: {
-		desc: "If the weather is sunnyday this pokemon has 1.5x atk and 2x spe.",
-		shortDesc: "If sunnyday is active, 1.5x atk & 2x spe.",
+		desc: "If Sunny Day is active, the user's Attack is multiplied by 1.5 and its Speed is doubled.",
+		shortDesc: "If Sunny Day is active, the user's Attack is 1.5x and its Speed is 2x.",
 		id: "seasonsgift",
 		name: "Season's Gift",
 		onModifyAtk: function (atk) {
@@ -33,8 +33,8 @@ let BattleAbilities = {
 	},
 	// Akir
 	regrowth: {
-		desc: "This Pokemon's healing moves have their priority increased by 1. When switching out, this pokemon restores 1/4 of its maximum HP.",
-		shortDesc: "+1 priority healing moves; heal 25% HP on switchout.",
+		desc: "This Pokemon's healing moves have their priority increased by 1. When switching out, this Pokemon restores 1/4 of its maximum HP.",
+		shortDesc: "Healing moves have +1 priority; heals 25% HP on switchout.",
 		id: "regrowth",
 		name: "Regrowth",
 		isNonstandard: true,
@@ -47,8 +47,8 @@ let BattleAbilities = {
 	},
 	// Arrested
 	shellshocker: {
-		desc: "This Pokemon's Normal-type moves become Electric type and have 1.2x power. In addition, this Pokemon heals 1/4 of its max HP when hit by Electric moves and is immune to Electric type moves.",
-		shortDesc: "Normal type moves become Electric type; Heals 1/4 HP when hit by an Electric attack.",
+		desc: "This Pokemon's Normal-type moves become Electric-type and have 1.2x power. In addition, this Pokemon heals 1/4 of its max HP when hit by Electric-type moves and is immune to Electric-type moves.",
+		shortDesc: "Normal-type moves are Electric and have 1.2x power; heals 1/4 max HP from Electric.",
 		id: "shellshocker",
 		name: "Shell Shocker",
 		isNonstandard: true,
@@ -74,8 +74,8 @@ let BattleAbilities = {
 	},
 	// Arsenal
 	logia: {
-		desc: "If this Pokemon is an Arceus, its type changes to match its held Plate or Z-Crystal. This pokemon is immune to Normal-type moves and to moves of the same type as itself.",
-		shortDesc: "Type matches its plate. Immunity to Normal moves & moves of this Pokemon's type.",
+		desc: "If this Pokemon is an Arceus, its type changes to match its held Plate or Z-Crystal, and it is immune to Normal-type moves as well as to moves of the same type as itself.",
+		shortDesc: "If Arceus: user type matches held plate or Z-Crystal, immune to Normal & user's type.",
 		// Logia's type-changing itself is implemented in statuses.js
 		id: "logia",
 		name: "Logia",
@@ -90,8 +90,8 @@ let BattleAbilities = {
 	stimulatedpride: {
 		id: "stimulatedpride",
 		name: "Stimulated Pride",
-		desc: "On switch in, this Pokemon summons Rain, and lowers the foe's attack by 1.",
-		shortDesc: "On switch in, this Pokemon summons Rain, and lowers the foe's attack by 1.",
+		desc: "On switch in, this Pokemon summons Rain Dance, and it lowers the Attack of adjacent foes not behind a Substitute by 1 stage.",
+		shortDesc: "On switch-in, this Pokemon summons Rain and lowers the Attack of adjacent foes by 1.",
 		isNonstandard: true,
 		onStart: function (pokemon) {
 			let activated = false;
@@ -117,7 +117,7 @@ let BattleAbilities = {
 	// Bimp
 	learnsomethingnew: {
 		desc: "This Pokemon's Attack is raised by 1 stage when another Pokemon faints.",
-		shortDesc: "This Pokemon's Atk is raised by 1 stage when another Pokemon faints.",
+		shortDesc: "This Pokemon's Attack is raised by 1 stage when another Pokemon faints.",
 		id: "learnsomethingnew",
 		name: "Learn Something New!",
 		isNonstandard: true,
@@ -127,8 +127,8 @@ let BattleAbilities = {
 	},
 	// Brandon
 	gracideamastery: {
-		desc: "If this pokemon is a Shaymin, it will transform into Shaymin-Sky before using a Physical or Special attack move. After using the move, this pokemon will transform back into Shaymin.",
-		shortDesc: "This pokemon transforms into Shaymin-Sky before attacking, and revert to Shaymin after.",
+		desc: "If this Pokemon is a Shaymin, it will transform into Shaymin-Sky before using a Physical or Special attack. After using the attack, if this Pokemon was previously in its Shaymin forme, it will transform back into Shaymin.",
+		shortDesc: "Transforms into Shaymin-Sky before attacking, and reverts to Shaymin after.",
 		id: "gracideamastery",
 		name: "Gracidea Mastery",
 		isNonstandard: true,
@@ -139,8 +139,8 @@ let BattleAbilities = {
 				source.formeChange('Shaymin-Sky', this.effect);
 			}
 		},
-		onAfterMove: function (pokemon, move) {
-			pokemon.formeChange('Shaymin', this.effect);
+		onAfterMove: function (target, source, move) {
+			source.formeChange('Shaymin', this.effect);
 		},
 	},
 	// cc
@@ -158,7 +158,7 @@ let BattleAbilities = {
 	},
 	// Cleo
 	adrenalinerush: {
-		desc: "The opposite of Slow Start. +2 SpA and Speed but is removed after 5 turns.",
+		desc: "On switch-in, this Pokemon's Attack and Speed are doubled for 5 turns. After five turns have passed, these effects are removed.",
 		shortDesc: "On switch-in, this Pokemon's Attack and Speed are doubled for 5 turns.",
 		onStart: function (pokemon) {
 			pokemon.addVolatile('adrenalinerush');
@@ -170,7 +170,7 @@ let BattleAbilities = {
 		effect: {
 			duration: 5,
 			onStart: function (pokemon) {
-				this.add('-message', `${pokemon.name}'s Adrenaline Rush has begun.`);
+				this.add('-message', `${pokemon}'s Adrenaline Rush has begun.`);
 			},
 			onModifySpAPriority: 5,
 			onModifySpA: function (spa, pokemon) {
@@ -180,7 +180,7 @@ let BattleAbilities = {
 				return this.chainModify(2);
 			},
 			onEnd: function (pokemon) {
-				this.add('-message', `${pokemon.name}'s Adrenaline Rush has ended.`);
+				this.add('-message', `${pokemon}'s Adrenaline Rush has ended.`);
 			},
 		},
 		id: "adrenalinerush",
@@ -188,8 +188,8 @@ let BattleAbilities = {
 	},
 	// E4 Flint
 	starkmountain: {
-		desc: "The user summons sunny weather when they switch in. Water-type attack damage against this pokemon is halved.",
-		shortDesc: "Summons sunny weather, halved Water damage.",
+		desc: "The user summons Sunny Day when it switches in. In addition, Water-type attacks do halved damage against this pokemon.",
+		shortDesc: "On switch-in, summons Sunny Day; halves power of Water-type attacks against user.",
 		id: "starkmountain",
 		name: "Stark Mountain",
 		isNonstandard: true,
@@ -204,8 +204,8 @@ let BattleAbilities = {
 	},
 	// HoeenHero
 	scripter: {
-		desc: "If the terrain is scripted terrain, this pokemon's moves have 1.5x power, and its speed is doubled.",
-		shortDesc: "If scripted terrain, 1.5x move power & 2x speed",
+		desc: "If Scripted Terrain is active, this Pokemon's Speed is doubled, and its moves have 1.5x power.",
+		shortDesc: "During Scripted Terrain: 2x Speed, 1.5x move power.",
 		id: "scripter",
 		name: "Scripter",
 		isNonstandard: true,
@@ -223,8 +223,8 @@ let BattleAbilities = {
 	},
 	// KingSwordYT
 	kungfupanda: {
-		desc: "This Pokemon's punch-based attacks have their power multiplied by 1.2, and this Pokemon's Speed is raised by 1 stage after it is damaged by a move",
-		shortDesc: "This Pokemon's punch-based attacks have 1.2x power. +1 Spe when hit.",
+		desc: "This Pokemon's punch-based attacks have their power multiplied by 1.2, and this Pokemon's Speed is raised by 1 stage after it is damaged by an attack.",
+		shortDesc: "This Pokemon's punch-based attacks have 1.2x power. +1 Spe when attacked.",
 		id: "kungfupanda",
 		name: "Kung Fu Panda",
 		isNonstandard: true,
@@ -243,7 +243,7 @@ let BattleAbilities = {
 	},
 	// Lionyx
 	frozenskin: {
-		desc: "If Hail is active, this Pokemon's Speed is doubled. This pokemon is also immune to Hail.",
+		desc: "If Hail is active, this Pokemon's Speed is doubled. This pokemon takes no damage from Hail.",
 		shortDesc: "If Hail is active, this Pokemon's Speed is doubled; immunity to Hail.",
 		id: "frozenskin",
 		name: "Frozen Skin",
@@ -259,8 +259,8 @@ let BattleAbilities = {
 	},
 	// Megazard
 	standuptall: {
-		desc: "This Pokemon's Defense or Special Defense is raised 1 stage at the end of each full turn on the field.",
-		shortDesc: "This Pokemon's Def or Spd is raised 1 stage at the end of each full turn on the field.",
+		desc: "This Pokemon's Defense or Special Defense is raised 1 stage at the end of each full turn it is on the field.",
+		shortDesc: "This Pokemon's Def or Sp. Def is raised 1 stage after each full turn on the field.",
 		id: "standuptall",
 		name: "Stand Up Tall",
 		isNonstandard: true,
@@ -278,7 +278,7 @@ let BattleAbilities = {
 	},
 	// MicktheSpud
 	fakecrash: {
-		desc: "If this Pokemon is a Lycanroc-Midnight, the first hit it takes in battle deals 0 neutral damage. Its disguise is then broken and it changes to Lycanroc-Dusk. Confusion damage also breaks the disguise.",
+		desc: "If this Pokemon is a Lycanroc-Midnight, the first hit it takes in battle deals 0 neutral damage. Its disguise is then broken and it transforms into Lycanroc-Dusk. Confusion damage also breaks the disguise.",
 		shortDesc: "If this Pokemon is a Lycanroc-Midnight, the first hit it takes in battle deals 0 damage.",
 		id: "fakecrash",
 		name: "Fake Crash",
@@ -308,8 +308,8 @@ let BattleAbilities = {
 	},
 	// nui
 	prismaticterrain: {
-		desc: "For 5 turns, the terrain becomes Prismatic Terrain. During the effect, the power of Ice-type attacks is multiplied by 0.5. Hazards are removed and cannot be set while Prismatic Terrain is active. Fails if the current terrain is Prismatic Terrain.",
-		shortDesc: "5 turns. No hazards,-Ice power.",
+		desc: "For 5 turns, the terrain becomes Prismatic Terrain. During the effect, the power of Ice-type attacks is multiplied by 0.5, even if the user is not grounded. Hazards are removed and cannot be set while Prismatic Terrain is active. Fails if the current terrain is Prismatic Terrain.",
+		shortDesc: "5 turns. No hazards, -Ice power, even if not grounded.",
 		id: "prismaticterrain",
 		name: "Prismatic Terrain",
 		isNonstandard: true,
@@ -406,8 +406,8 @@ let BattleAbilities = {
 	},
 	// ptoad
 	fatrain: {
-		desc: "This pokemon summons Rain when it switches in, and its Defense is 1.5x in Rain.",
-		shortDesc: "This pokemon summons Rain when it switches in; 1.5x def in Rain.",
+		desc: "This Pokemon summons Rain Dance when it switches in, and its Defense is 1.5x when Rain is active.",
+		shortDesc: "This Pokemon summons Rain when it switches in; 1.5x Defense in Rain.",
 		id: "fatrain",
 		name: "Fat Rain",
 		isNonstandard: true,
@@ -426,8 +426,8 @@ let BattleAbilities = {
 	},
 	// Psynergy
 	wrath: {
-		desc: "This Pokemon's moves have their accuracy multiplied by 1.1 and their critical hit ratio is raised by 1 stage.",
-		shortDesc: "+1 Crit Ratio; Accuracy of moves increased.",
+		desc: "This Pokemon has its critical hit ratio raised by 1 stage, and its moves have their accuracy multiplied by 1.1.",
+		shortDesc: "+1 Crit Ratio; user's moves have 1.1x accuracy.",
 		id: "wrath",
 		name: "Wrath",
 		isNonstandard: true,
@@ -442,8 +442,8 @@ let BattleAbilities = {
 	},
 	// Rory Mercury
 	recharge: {
-		desc: "This Pokemon has its major status condition cured, and restores 1/3 of its maximum HP, rounded down, when it switches out. When this Pokemon switches in, if it uses an Electric-type attack on the next turn, its power will be doubled",
-		shortDesc: "Natural Cure + Regenerator + Charge",
+		desc: "Upon switching out, this Pokemon has its major status condition cured and restores 1/3 of its maximum HP, rounded down. When this Pokemon switches in, if it uses an Electric-type attack on the next turn, that attack's power will be doubled",
+		shortDesc: "Switch-out: heals status + 33% HP. Switch-in: 2x power on Electric move next turn.",
 		id: "recharge",
 		name: "Recharge",
 		isNonstandard: true,
@@ -462,7 +462,7 @@ let BattleAbilities = {
 	// SamJo
 	thiccerfat: {
 		desc: "If a Pokemon uses a Fire- or Ice-type attack against this Pokemon, that Pokemon's attacking stat is halved when calculating the damage to this Pokemon. This Pokemon cannot be burned. Gaining this Ability while burned cures it.",
-		shortDesc: "Fire/Ice-type damage reduced. Immune to burns.",
+		shortDesc: "Fire/Ice-type damage against user halved. Immune to burns.",
 		id: "thiccerfat",
 		name: "Thiccer Fat",
 		isNonstandard: true,
@@ -535,8 +535,8 @@ let BattleAbilities = {
 	},
 	// The Immortal
 	beastboost2: {
-		desc: "This Pokemon's highest 2 stats are raised by 1 if it attacks and KOes another Pokemon.",
-		shortDesc: "This Pokemon's highest 2 stats are raised by 1 if it attacks and KOes another Pokemon.",
+		desc: "This Pokemon's two highest stats are raised by 1 if it attacks and KOes another Pokemon.",
+		shortDesc: "This Pokemon's 2 highest stats are raised by 1 if it attacks and KOes another Pokemon.",
 		id: "beastboost2",
 		name: "Beast Boost 2",
 		isNonstandard: true,
@@ -550,8 +550,8 @@ let BattleAbilities = {
 	},
 	// torkool
 	deflectiveshell: {
-		desc: "Non-contact moves do 33% less damage to this pokemon. Summons Sunny Day on switch-in.",
-		shortDesc: "Drought + Non-contact does 33% less damage.",
+		desc: "Summons Sunny Day on switch-in. Non-contact moves deal 33% less damage to this Pokemon.",
+		shortDesc: "Summons Sunny Day. Non-contact moves deal 33% less damage.",
 		id: "deflectiveshell",
 		name: "Deflective Shell",
 		isNonstandard: true,
@@ -570,8 +570,8 @@ let BattleAbilities = {
 	},
 	// Trickster
 	interdimensional: {
-		desc: "On Switch-in, this Pokemon summons Gravity.",
-		shortDesc: "On Switch-in, this Pokemon Summons Gravity.",
+		desc: "On switch-in, this Pokemon summons Gravity.",
+		shortDesc: "On switch-in, this Pokemon Summons Gravity.",
 		id: "interdimensional",
 		name: "Interdimensional",
 		isNonstandard: true,
@@ -581,8 +581,8 @@ let BattleAbilities = {
 	},
 	// urkerab
 	focusenergy: {
-		desc: "This Pokemon gains the Focus Energy status when it switches in.",
-		shortDesc: "This Pokemon gains the Focus Energy status when it switches in.",
+		desc: "This Pokemon gains the Focus Energy effect when it switches in.",
+		shortDesc: "This Pokemon gains the Focus Energy effect when it switches in.",
 		id: "focusenergy",
 		name: "Focus Energy",
 		isNonstandard: true,
@@ -592,8 +592,8 @@ let BattleAbilities = {
 	},
 	// Yuki
 	snowstorm: {
-		desc: "Hail crashes down for unlimited turns.",
-		shortDesc: "Hail crashes down for unlimited turns.",
+		desc: "On switch-in, this Pokemon summons Hail, which remains in effect until replaced by another weather or suppressed by the effects of Cloud Nine, Air Lock, or Delta Stream.",
+		shortDesc: "Summons Hail, which remains in effect until replaced or suppressed.",
 		id: "snowstorm",
 		name: "Snow Storm",
 		isNonstandard: true,
